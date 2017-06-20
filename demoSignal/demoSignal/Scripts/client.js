@@ -27,9 +27,19 @@ function _session(arg){
         this.label.innerHTML=arg.label;
         this.field.placeHolder=arg.field;
         this.btn.innerHTML=arg.btn;
-        this.btn.addEventListener('click',this.click,false);
+        this.btn.addEventListener('click', this.click, false);
+        this.setStyle();
     };
     this.click;
+    this.setStyle = function () {
+        this.dom.style.width = '250px';
+        this.dom.style.height = '300px';
+        this.dom.style.backgroundColor = 'rgb(80,80,80)';
+        this.btn.style.width = '120px';
+        this.btn.style.height = '30px';
+        this.btn.style.borderRadius = '12px';
+        this.btn.style.backgroundColor = 'green';
+    }
     this.begin(arg);
 }
 
@@ -53,8 +63,18 @@ function _panel(){
         this.dom.appendChild(this.status);
         this.dom.appendChild(this.btn);
         this.btn.addEventListener('click',this.click,false);
+        this.setStyle();
         
-        
+    };
+    this.setStyle = function () {
+        this.dom.style.width = '250px';
+        this.dom.style.height = '300px';
+        this.dom.style.backgroundColor='rgb(80,80,80)'
+        this.btn.style.width = '200px';
+        this.btn.style.height = '50px';
+        this.btn.style.marginLeft = 'auto';
+        this.btn.style.marginRight = 'auto';
+        this.btn.style.backgroundColor='rgb(0,200,10)'
     };
     this.click;
     this.begin();

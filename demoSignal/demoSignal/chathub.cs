@@ -16,8 +16,9 @@ namespace demoSignal
             bool nuevo=false;
         
                 Clientes.Add(new nCliente(id, name,true));
-                Clients.Client(monitor.id).nuevo(id, name,true);
-               
+            if (monitor.id != null) {
+               Clients.Client(monitor.id).nuevo(id, name, true);
+            }
             
             
            
